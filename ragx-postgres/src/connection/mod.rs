@@ -1,8 +1,9 @@
 pub mod tcp;
 pub mod unix;
 
-use crate::client::{ConnectionConfig, ConnectionType};
-use crate::errors::ClientError;
+use ragx_core::connection_config::*;
+
+use ragx_core::errors::ClientError;
 
 use tcp::connect_tcp;
 use unix::connect_unix;

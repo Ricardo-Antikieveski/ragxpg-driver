@@ -1,6 +1,6 @@
 use tokio::net::TcpStream;
-use crate::client::ConnectionConfig;
-use crate::errors::ClientError;
+use ragx_core::connection_config::ConnectionConfig;
+use ragx_core::errors::ClientError;
 
 pub async fn connect_tcp(config: &ConnectionConfig) -> Result<TcpStream, ClientError> {
     let host = config.host.as_ref().unwrap();
